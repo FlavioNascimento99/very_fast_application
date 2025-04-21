@@ -1,0 +1,80 @@
+<div style="display: flex; flex-direction: column; align-items: center; border: 1px solid; height: 100vh; justify-content: center;">
+  <div style="color: grey; justify-self: center;">
+    <span style="font-family: 'Geist', monospace; font-weight: bold; color: white;">0xNascimento_</span>
+  </div>
+
+  <div class="flex justify-center items-center" style="width: 70vw; color: white;">
+    <span style="font-size: 55px; font-weight: bold;">Bem-vindo à tela de
+      <span style="font-style: italic; background: linear-gradient(90deg, #ffcc00, #ff0202); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Criação de Posts
+      </span>
+      ✍🏻
+    </span>
+  </div>
+
+  <div style=" display: flex; margin: 2em; justify-content: space-around; width: 50vw; color: white;">
+    <a href="/" class="hover:underline">inicio</a>
+    <a href="/about/index" class="hover:underline">sobre</a>
+    <a href="/contact/index" class="hover:underline">contate-me</a>
+    <a href="/posts/new" class="hover:underline">criar post</a>
+    <a href="/posts/index" class="hover:underline">listar post</a>
+  </div>
+
+  <div style="background-color: #1E1E1E; display: flex; flex-direction: column; justify-content: space-around;
+    font-family: 'Courier New',serif; border-radius: 5px; color: white; width: 50vw; align-self: center;">
+
+    <div style="display: flex; align-items: center; gap: 8px; padding: 8px;">
+      <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f56;"></div>
+      <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ffbd2e;"></div>
+      <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #27c93f;"></div>
+    </div>
+
+    <%= form_with model: @post, local: true, html: { style: "padding: 10px; display: flex; flex-direction: row;" } do |form| %>
+      <div style="width: 32.5vw;">
+        <div style="color: white; font-weight: lighter; font-family: 'GeistMono', monospace;">
+          <%= form.label :content, style: "font-family: 'GeistMono Bold', sans-serif;" %><br>
+          <%= form.text_area :content, style: "resize: none; border: 1px solid black; border-radius: 10px; outline: none;
+          padding: 5px; color:
+          white; width: 30vw; height: 20vh;" %>
+        </div>
+      </div>
+
+      <div style="width: 17.5vw;">
+        <div style="color: white;">
+          <%= form.label :title, style: "font-family: 'GeistMono Bold', sans-serif;" %><br>
+          <%= form.text_field :title, style: "font-family: 'GeistMono Thin', sans-serif; border: 1px solid black;
+          border-radius:
+          10px;
+          padding:
+          5px; outline:
+          none;
+          color:
+          white; font-style:
+          italic; width: 15vw; height: 5vh;" %>
+        </div>
+
+        <div style="color: white; font-weight: lighter; font-family: 'GeistMono', monospace; display: flex;
+          flex-direction: column;">
+
+          <div style="width: 15vw; border: 1px solid grey; margin: 2em 0;"></div>
+
+          <div style="display: flex; justify-content: space-around; width: 15vw;">
+            <%= form.submit "Create Post", class: "hover:underline", style: "cursor: pointer; color: white;
+            border-radius:
+                13px;
+            border:
+            1px
+            solid black;
+            font-size:
+           12px; padding: 3px;" %>
+            <a href="/posts/index" class="hover:underline" style="color: white; border-radius: 13px; border: 1px solid
+              black;
+              font-size:
+              12px;
+              padding: 5px;">To List</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

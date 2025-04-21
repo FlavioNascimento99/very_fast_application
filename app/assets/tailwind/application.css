@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'GeistMono Regular';
+    src: url('/../assets/fonts/GeistMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'xGeistMono Thin';
+    /*src: url('/../assets/fonts/GeistMono-Thin.ttf') format('truetype');*/
+    src: url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+    font-style: auto;
+}
+
+@font-face {
+    font-family: 'GeistMono Bold';
+    src: url('/../assets/fonts/GeistMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
